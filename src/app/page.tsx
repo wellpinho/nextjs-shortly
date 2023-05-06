@@ -1,6 +1,36 @@
+'use client'
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [text, setText] = useState('')
+  const [textColor, setTextColor] = useState('text-white')
+  let isValid: boolean;
+
+  const handleInput = (e: any) => {
+    const regex = (/^(?!-)[A-Za-z0-9-]+([\-\.]{1}[a-z0-9]+)*\.[A-Za-z]{2,6}$/);
+    const textInput = e.target.value
+    setText('')
+
+    if (textInput.match(regex)) {
+      isValid = true
+      setTextColor('text-white')
+      setText(textInput)
+    } else {
+      isValid = false
+    }
+  }
+
+  const handleSend = (event: any) => {
+    event.preventDefault();
+
+    if (text === '' || isValid === false) {
+      setTextColor('text-red')
+      setText('Please insert a valid domain')
+    }
+  }
+
   return (
     <>
       <nav className="relative container mx-auto p-6">
@@ -73,7 +103,7 @@ export default function Home() {
           </div>
 
             <div className="mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2">
-              <Image width={500} height={100} src="/images/illustration-working.svg" alt="" />
+              <Image width={512} height={100} src="/images/illustration-working.svg" alt="" />
             </div>
         </div>
       </section>
@@ -108,21 +138,33 @@ export default function Home() {
               " 
               placeholder="Shorten a link here"
               id="link-input"
+              onChange={handleInput}
             />
 
-            <button className="
-              px-10 
-              py-3 
-              text-white 
-              bg-cyan 
-              rounded-lg 
-              hover:bg-cyanLight 
-              hover:text-veryDarkBlue 
-              focus:outline-none 
-              md:py-2
-            ">
+            <button
+              onClick={handleSend}
+              className="
+                px-10 
+                py-3 
+                text-white 
+                bg-cyan 
+                rounded-lg 
+                hover:bg-cyanLight 
+                hover:text-veryDarkBlue 
+                focus:outline-none 
+                md:py-2
+              "
+            >
               Shorten It!
             </button>
+
+            {/* error message */}
+            <div id="error-msg" 
+              className={`
+                absolute left-7 bottom-3 ${textColor} text-sm font-bold
+              `}>
+              { text }
+            </div>
           </form>
 
           {/* link 1 */}
