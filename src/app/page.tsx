@@ -231,28 +231,218 @@ export default function Home() {
 
       {/* feature box section */}
       <section id="features" className="pb-32 bg-gray-100">
-        <div className="relatice container flex flex-col imtes-start px-6 mx-auto md:flex-row md:space-x-7">
+        <div className="
+          relative 
+          container 
+          flex 
+          flex-col 
+          items-start 
+          px-6 
+          mx-auto 
+          md:flex-row 
+          md:space-x-7
+        ">
           {/* horizontal line */}
-          <div className="hidden absolute top-24 w-10/12 left-16 h-3 bg-cyan md:block"></div>
+          <div className="
+            hidden 
+            absolute 
+            top-24 
+            w-10/12 
+            left-16 
+            h-3 
+            bg-cyan 
+            md:block
+          "></div>
           {/* vertical line */}
-          <div className="absolute w-2 h-full -ml-1 left-1/2 bg-cyan md:hidden"></div>
+          <div className="
+            absolute 
+            w-2 
+            h-full 
+            -ml-1 
+            left-1/2 
+            bg-cyan 
+            md:hidden
+          "></div>
 
           {/* box 1 */}
-          <div className="relative flex flex-col p-6 space-y-6 md:w-1/3 bg-white rounded-lg">
+          <div className="
+            relative 
+            flex 
+            flex-col 
+            p-6 
+            space-y-6 
+            bg-white 
+            rounded-lg 
+            md:w-1/3
+          ">
             {/* image positionng */}
-            <div className="absolute -ml-10 -top-10 left-1/2 md:left-16">
+            <div className="
+              absolute 
+              -ml-10 
+              -top-10 
+              left-1/2 
+              md:left-16
+            ">
               {/* image container for background & center */}
-              <div className="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-veryDarkBlue">
-                <img src="/images/icon-brand-recognition.svg" alt="" />
+              <div className="
+                flex 
+                items-center 
+                justify-center 
+                w-20 
+                h-20 
+                p-4 
+                rounded-full 
+                bg-veryDarkBlue
+              ">
+                <Image 
+                  src="/images/icon-brand-recognition.svg" 
+                  alt=""
+                  width={100}
+                  height={100} 
+                />
               </div>
-              <h5 className="pt-6 text-xl font-bold text-bold text-center captalize md:flex-left">
-                Brand Recognition
-              </h5>
-              <p className="text-center text-gray-400 md:text-left">
-                Boost your brand recognition with each click, Generic links don&apos;t mean a thing.
-                Brand links help instil confidence in your content.
-              </p>
             </div>
+            <h5 className="
+              pt-6 
+              text-xl 
+              font-bold 
+              text-center 
+              captalize 
+              md:flex-left
+            ">
+              Brand Recognition
+            </h5>
+            <p className="
+              text-center 
+              text-gray-400 
+              md:text-left
+            ">
+              Boost your brand recognition with each click, Generic links don&apos;t mean a thing.
+              Brand links help instil confidence in your content.
+            </p>
+          </div>
+
+          {/* box 2 */}
+          <div className="
+            relative 
+            flex 
+            flex-col 
+            mt-24 
+            p-6 
+            space-y-6 
+            bg-white 
+            rounded-lg 
+            md:mt-8 
+            md:w-1/3
+          ">
+            {/* image positionng */}
+            <div className="
+              absolute 
+              -ml-10 
+              -top-10 
+              left-1/2 
+              md:mt-8 
+              md:left-16
+            ">
+              {/* image container for background & center */}
+              <div className="
+                flex 
+                items-center 
+                justify-center 
+                w-20 
+                h-20 
+                p-4 
+                rounded-full 
+                bg-veryDarkBlue
+              ">
+                <Image
+                  src="/images/icon-detailed-records.svg" 
+                  alt="" 
+                  width={100}
+                  height={100} 
+                />
+              </div>
+            </div>
+            <h5 className="
+              pt-6 
+              text-xl 
+              font-bold 
+              text-center 
+              captalize 
+              md:flex-left
+            ">
+              Detailed records
+            </h5>
+            <p className="
+              text-center 
+              text-gray-400 
+              md:text-left
+            ">
+              Gain insights into who is clicking your links. Knows when and where people engage with your 
+              content helps inform better decisions.
+            </p>
+          </div>
+
+          {/* box 3 */}
+          <div className="
+            relative 
+            flex 
+            flex-col 
+            mt-24 
+            p-6 
+            space-y-6 
+            bg-white 
+            rounded-lg 
+            md:mt-16 
+            md:w-1/3
+          ">
+            {/* image positionng */}
+            <div className="
+              absolute 
+              -ml-10 
+              -top-10 
+              left-1/2 
+              md:mt-8 
+              md:left-16
+            ">
+              {/* image container for background & center */}
+              <div className="
+                flex 
+                items-center 
+                justify-center 
+                w-20 
+                h-20 
+                p-4 
+                rounded-full 
+                bg-veryDarkBlue
+              ">
+                <Image
+                  src="/images/icon-fully-customizable.svg" 
+                  alt="" 
+                  width={100}
+                  height={100} 
+                />
+              </div>
+            </div>
+            <h5 className="
+              pt-6 
+              text-xl 
+              font-bold 
+              text-bold 
+              text-center 
+              captalize 
+              md:flex-left
+            ">
+              Fully customized
+            </h5>
+            <p className="
+              text-center 
+              text-gray-400 
+              md:text-left
+            ">
+              Improve brand awarendess and content discoverability through
+              customized links, superchanging audience engagement.
+            </p>
           </div>
         </div>
       </section>
