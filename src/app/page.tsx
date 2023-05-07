@@ -6,6 +6,8 @@ import { useState } from "react";
 export default function Home() {
   const [text, setText] = useState('')
   const [textColor, setTextColor] = useState('text-white')
+  const [openMenu, setOpenMenu] = useState('hidden')
+  const [effectMenu, setEffectMenu] = useState('')
   let isValid: boolean;
 
   const handleInput = (e: any) => {
@@ -28,6 +30,16 @@ export default function Home() {
     if (text === '' || isValid === false) {
       setTextColor('text-red')
       setText('Please insert a valid domain')
+    }
+  }
+
+  const handleOpenMenu = () => {
+    setOpenMenu('flex')
+    setEffectMenu('open')
+
+    if (openMenu === 'flex') {
+      setOpenMenu('hidden')
+      setEffectMenu('')
     }
   }
 
@@ -70,10 +82,34 @@ export default function Home() {
           </div>
 
           {/* TODO: hamburger menu */}
+          <button 
+            id="menu-btn" 
+            onClick={handleOpenMenu}
+            className={`
+              ${effectMenu}
+              block 
+              hamburger 
+              lg:hidden 
+              focus:outline-none`}
+            type="button"
+          >
+            <span className="hamburger-top"></span>
+            <span className="hamburger-middle"></span>
+            <span className="hamburger-bottom"></span>
+          </button>
 
         </div>
 
           {/* mobile menu */}
+          <div id="menu" className={`absolute ${openMenu} p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100`}>
+            <div className="flex flex-col items-center justify-center w-full space-y-6 font-cold text-white rounded-sm">
+              <a href="" className="w-full text-center">Features</a>
+              <a href="" className="w-full text-center">Pricing</a>
+              <a href="" className="w-full text-center">Resouces</a>
+              <a href="" className="w-28 py-3 text-center hover:rounded-full hover:bg-cyan">Login</a>
+              <a href="" className="w-28 py-3 text-center rounded-full bg-cyan hover:bg-white hover:text-veryDarkViolet">Sign up</a>
+            </div>
+          </div>
       </nav>
 
       <section id="hero">
