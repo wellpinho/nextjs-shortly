@@ -446,6 +446,111 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* section CTA */}
+      <section id="cta" className="py-24 bg-darkViolet">
+        <div className="flex flex-col p-2 space-6">
+          <h5 className="mx-auto space-y-10 text-4xl font-bold- text-center text-white">
+            Boost your links today.
+          </h5>
+          <button className="
+            px-10 
+            py-5 
+            mx-auto 
+            text-2xl 
+            font-bold 
+            text-white 
+            rounded-full 
+            bg-cyan 
+            hover:bg-cyanLight 
+            md:text-base 
+            md:py-3 
+            focus:outline-none
+          ">
+            Get started
+          </button>
+        </div>
+      </section>
+
+      <footer className="py-16 bg-veryDarkViolet">
+        <div className="container flex flex-col items-center justify-between mx-auto space-y-16 md:flex-row md:space-y-0 md:items-start">
+          <Image width={100} height={100} src="/images/logo.svg" alt="" />
+
+          {/* menu container */}
+          <div className="flex flex-col space-y-16 md:space-x-20 md:flex-row md:space-y-0">
+            {/* menu 1 */}
+            <div className="flex flex-col items-center w-full md:items-start">
+              <div className="mb-5 font-bold text-white captalize">Features</div>
+              <div className="flex flex-col items-center space-y-3 md:items-start">
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Link shortening</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Branded links</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Analitics</a>
+              </div>
+            </div>
+
+            {/* menu 2 */}
+            <div className="flex flex-col items-center w-full md:items-start">
+              <div className="mb-5 font-bold text-white captalize">Resources</div>
+              <div className="flex flex-col items-center space-y-3 md:items-start">
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Blog</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">BDevelopers</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Support</a>
+              </div>
+            </div>
+
+            {/* menu 3 */}
+            <div className="flex flex-col items-center w-full md:items-start">
+              <div className="mb-5 font-bold text-white captalize">Company</div>
+              <div className="flex flex-col items-center space-y-3 md:items-start">
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">About</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Our team</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Careers</a>
+                <a href="" className="captalize text-grayisViolet hover:text-cyan">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          {/* social container */}
+          <div className="flex space-x-6">
+            <a href="">
+              <Image 
+                src="/images/icon-facebook.svg"
+                width={25} 
+                height={25} 
+                alt=""
+                className="socialIcon"
+              />
+            </a>
+            <a href="">
+              <Image 
+                src="/images/icon-twitter.svg"
+                width={25} 
+                height={25} 
+                alt=""
+                className="socialIcon"
+              />
+            </a>
+            <a href="">
+              <Image 
+                src="/images/icon-pinterest.svg"
+                width={25} 
+                height={25} 
+                alt=""
+                className="socialIcon"
+              />
+            </a>
+            <a href="">
+              <Image 
+                src="/images/icon-instagram.svg"
+                width={25} 
+                height={25} 
+                alt=""
+                className="socialIcon"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
